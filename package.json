@@ -15,9 +15,9 @@
     "src"
   ],
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview"
+    "dev": "vitepress dev demo",
+    "build": "vitepress build demo",
+    "preview": "vitepress preview demo"
   },
   "repository": {
     "type": "git",
