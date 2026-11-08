@@ -120,6 +120,28 @@ For example:
 
 See [the default variables](./src/client/styles/default-theme-vars.css) for all available overrides. Custom themes can define these variables without using VitePress's default theme.
 
+## Development demo
+
+The `demo` directory contains a small VitePress site that imports the plugin and styles directly from `src`. It uses the dependencies installed in this repository; no package publishing or `npm link` is required.
+
+Install dependencies and start the development server:
+
+```bash
+npm ci
+npm run dev
+```
+
+Open the local URL printed by VitePress. The demo includes interactive rollers, empty and invalid notations, modifiers and static rolls. Check both light and dark themes, narrow screens and navigation between pages.
+
+To check the production build and client loading:
+
+```bash
+npm run build
+npm run preview
+```
+
+Changes to client code and styles are handled by the development server. Restart it after changing the Markdown plugin or VitePress configuration if the rendered output has not refreshed. The generated cache and build output are ignored by Git.
+
 ## Licence
 
 [MIT](./LICENSE.txt).
