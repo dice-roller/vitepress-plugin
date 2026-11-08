@@ -1,0 +1,49 @@
+{
+  "name": "@dice-roller/vitepress-plugin-dice-roller",
+  "version": "1.3.3",
+  "description": "Plugin for VitePress that allows rolling dice",
+  "type": "module",
+  "exports": {
+    ".": "./src/node/index.js",
+    "./client": "./src/client/index.js",
+    "./package.json": "./package.json",
+    "./style.css": "./src/client/styles/index.css"
+  },
+  "main": "src/node/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dice-roller/vitepress-plugin.git"
+  },
+  "keywords": [
+    "vitepress",
+    "vitepress-plugin",
+    "dice",
+    "roll"
+  ],
+  "author": "GreenImp Media <info@greenimp.co.uk> (http://greenimp.co.uk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dice-roller/vitepress-plugin/issues"
+  },
+  "homepage": "https://github.com/dice-roller/vitepress-plugin",
+  "peerDependencies": {
+    "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "@dice-roller/markdown-it-dice-roller": "^1.2.0",
+    "@dice-roller/vue": "^1.3.3"
+  },
+  "devDependencies": {
+    "vue": "^3.5.45",
+    "vitepress": "^1.6.4"
+  }
+}

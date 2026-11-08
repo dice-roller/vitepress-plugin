@@ -1,0 +1,27 @@
+:root {
+    --dice-roller-text-color: var(--vp-c-text-1, #2c3e50);
+
+    --dice-roller-bg: var(--vp-c-bg-soft, #eeeeee);
+    --dice-roller-border-radius: 8px;
+    --dice-roller-color: var(--dice-roller-text-color);
+
+    --dice-roller-output-bg: var(--vp-c-bg, #ffffff);
+    --dice-roller-output-border-color: var(--vp-c-brand-1, #3451b2);
+    --dice-roller-output-border-radius: 0;
+    --dice-roller-output-color: var(--dice-roller-text-color);
+    --dice-roller-output-font-family: var(--vp-font-family-mono, monospace);
+
+    --dice-roller-form-height: 2.75rem;
+
+    --dice-roller-input-bg: var(--vp-c-bg, #ffffff);
+    --dice-roller-input-border: var(--vp-c-divider, #e2e2e3);
+    --dice-roller-input-border-focus: var(--vp-c-brand-1, #3451b2);
+    --dice-roller-input-color: var(--dice-roller-text-color);
+
+    --dice-roller-button-bg: var(--vp-button-brand-bg, #5672cd);
+    --dice-roller-button-bg-active: var(--vp-button-brand-hover-bg, #3a5ccc);
+    --dice-roller-button-border-color: var(--vp-button-brand-border, transparent);
+    --dice-roller-button-color: var(--vp-button-brand-text, #ffffff);
+
+    --dice-roller-error-color: var(--vp-c-danger-1, #b8272c);
+}
