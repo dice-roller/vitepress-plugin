@@ -36,14 +36,15 @@
   },
   "homepage": "https://github.com/dice-roller/vitepress-plugin",
   "peerDependencies": {
-    "vitepress": "^1.6.4"
+    "vitepress": "^1.6.4",
+    "@dice-roller/vue": "^1.3.3 || ^2.0.0"
   },
   "dependencies": {
-    "@dice-roller/markdown-it-dice-roller": "^1.2.0",
-    "@dice-roller/vue": "^1.3.3"
+    "@dice-roller/markdown-it-dice-roller": "^1.2.0"
   },
   "devDependencies": {
     "vue": "^3.5.45",
-    "vitepress": "^1.6.4"
+    "vitepress": "^1.6.4",
+    "@dice-roller/vue": "^1.3.3 || ^2.0.0"
   }
 }

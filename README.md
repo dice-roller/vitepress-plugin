@@ -6,12 +6,12 @@
 
 Add interactive dice rollers to [VitePress](https://vitepress.dev/) pages using Markdown.
 
-The plugin connects the [Markdown-it dice roller](https://github.com/dice-roller/markdown-it-dice-roller) and [Vue component](https://github.com/dice-roller/vue) to VitePress. Rolls currently use RPG Dice Roller v5; v6 support will be added in the shared packages separately.
+The plugin connects the [Markdown-it dice roller](https://github.com/dice-roller/markdown-it-dice-roller) and [Vue component](https://github.com/dice-roller/vue) to VitePress.
 
 ## Install
 
 ```bash
-npm install -D @dice-roller/vitepress-plugin-dice-roller
+npm install -D @dice-roller/vitepress-plugin-dice-roller @dice-roller/vue
 ```
 
 ### Markdown configuration
