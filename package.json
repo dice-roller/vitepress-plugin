@@ -1,6 +1,6 @@
 {
   "name": "@dice-roller/vitepress-plugin-dice-roller",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.2",
   "description": "Plugin for VitePress that allows rolling dice",
   "type": "module",
   "exports": {
@@ -17,7 +17,9 @@
   "scripts": {
     "dev": "vitepress dev demo",
     "build": "vitepress build demo",
-    "preview": "vitepress preview demo"
+    "preview": "vitepress preview demo",
+    "test:ssr": "node --test tests/ssr.test.mjs",
+    "test:e2e": "node --test tests/browser.test.mjs"
   },
   "repository": {
     "type": "git",
@@ -36,7 +38,7 @@
   },
   "homepage": "https://github.com/dice-roller/vitepress-plugin",
   "peerDependencies": {
-    "@dice-roller/vue": "^1.4.0 || ^2.0.0",
+    "@dice-roller/vue": "^1.4.0 || ^2.0.0-beta.0",
     "vitepress": "^1.6.4"
   },
   "dependencies": {

@@ -1,10 +1,26 @@
-import { defineClientComponent } from 'vitepress';
+import { defineComponent, h, onMounted, shallowRef } from 'vue';
 
-// Load the interactive component only after mounting, keeping browser APIs and
-// its generated input IDs out of VitePress's server-rendered pages.
-const DiceRoller = defineClientComponent(() =>
-    import('@dice-roller/vue').then(({ DiceRoller }) => DiceRoller),
-);
+// Mount the interactive roller only in the browser. Rendering nothing during
+// SSR avoids hydration mismatches and keeps browser-only code out of the server.
+const DiceRoller = defineComponent({
+    name: 'DiceRoller',
+    inheritAttrs: false,
+
+    setup(_, { attrs, slots }) {
+        const component = shallowRef(null);
+
+        onMounted(async () => {
+            const { DiceRoller: VueDiceRoller } = await import('@dice-roller/vue');
+            component.value = VueDiceRoller;
+        });
+
+        // Forward notation and other attributes, listeners, and slots to the
+        // actual component after it has loaded.
+        return () => component.value
+            ? h(component.value, attrs, slots)
+            : null;
+    },
+});
 
 export { DiceRoller };
 export default DiceRoller;
