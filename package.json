@@ -1,6 +1,6 @@
 {
   "name": "@dice-roller/vitepress-plugin-dice-roller",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "Plugin for VitePress that allows rolling dice",
   "type": "module",
   "exports": {
