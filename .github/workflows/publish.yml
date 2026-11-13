@@ -1,0 +1,20 @@
+name: Publish to npm
+
+on:
+  push:
+    branches: [next]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    # Pilot: only publish v6 prereleases from next. Enable main after
+    # the first trusted-publishing test and stable release review.
+    if: github.ref == 'refs/heads/next'
+    uses: dice-roller/.github/.github/workflows/npm-publish.yml@main
+    with:
+      test-command: npm run test:ssr
+      build-command: npm run build
